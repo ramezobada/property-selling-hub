@@ -1,0 +1,19 @@
+const video = document.getElementById("camera");
+
+document.getElementById("openCamera").addEventListener("click", async () => {
+
+    const stream = await navigator.mediaDevices.getUserMedia({
+        video: true
+    });
+
+    video.srcObject = stream;
+
+});
+
+const PASSKEY = "HyperMall123";
+
+const passkey = document.getElementById("key").value;
+
+if (passkey === PASSKEY) {
+    // Valid
+}
