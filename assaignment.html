@@ -1,0 +1,34 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="choices">
+        <label>
+            <input type="radio" name="color" value="red">
+            Red
+        </label>
+<br>
+        <label>
+            <input type="radio" name="color" value="blue">
+            Blue
+        </label>
+    </div>
+    <input type="text" id="newchoice" placeholder="Add another choice">
+    <button type="button" onclick="addchoice()">Add</button>
+    <script>
+function addchoice() {
+    const input = document.getElementById("newchoice");
+    const choice = input.value;
+    if (choice === "") {
+        return;
+    }
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="color" value="${choice}"> ${choice}`;
+    document.getElementById("choices").appendChild(label);
+    input.value = "";
+}
+    </script>
+</body>
+</html>

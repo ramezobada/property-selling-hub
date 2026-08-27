@@ -1,14 +1,16 @@
 <doctype html>
 <html lang="en">
     <head>
-    <title>
-           Registration Page
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
+        <title> doctor nazeeh Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="This is the login page for Dr. Nazeeh's WEB 1 project. Please enter your credentials to log in.">
+        <meta name="keywords" content="Dr. Nazeeh, login, WEB 1 project, credentials, identification">
+
     </head>
     <body>
-       <div>
+        <div>
+        <div style="clear: both; text-align: center;">
             <div style="float: left;">
                 <a href="home page.html" style="text-decoration: none; color: black; font-size: 18px; font-weight: bold; padding: 10px 20px; border-radius: 5px; background-color: #fbbf24;">Home</a>
             </div>
@@ -19,43 +21,69 @@
                 <a href="login page.html" style="text-decoration: none; color: black; font-size: 18px; font-weight: bold; padding: 10px 20px; border-radius: 5px; background-color: #fbbf24;">Login</a>
             </div>
             <div style="float: left; margin-left: 10px;">
-                <a href="dr.nazeeh.html" style="text-decoration: none; color: black; font-size: 18px; font-weight: bold; padding: 10px 20px; border-radius: 5px; background-color: #fbbf24;">Are you d.nazeeh?</a>
+                <a href="dr.nazeeh login page.html" style="text-decoration: none; color: black; font-size: 18px; font-weight: bold; padding: 10px 20px; border-radius: 5px; background-color: #fbbf24;">Are you d.nazeeh?</a>
             </div>
        </div>
 
-        <div style="clear: both; margin-top: 50px; text-align: center; padding-top: 10px;">
+            <center><h1 style="padding: 40px;">nice to see you DOCTOR nazeeh</h1></center>
             
-            <div>
-        <center><h2>Welcome to my WEB 1 project!</h2></center>
-                  <div><center><h3>please fill your credentials below to identify yourself</h3>
-                    <form action="identification file.docx" method="post" autocomplete="on" enctype="multipart/form-data">
-                        <fieldset style="width: 5%; border: 2px solid black; padding: 20px; border-radius: 10px;">
-                        <label for="name"> Full Name:</label><br><br>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
-                        <label for="email">Email:</label><br><br>
-                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
-                        <label for="password">create password:</label><br><br>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required ><br><br>
-                        </fieldset>
-                    </form></center><!--
+            <div><center><h3>please fill your credentials below to identify yourself</h3>
+                    <form id="loginForm" style="padding: 20px; margin-left: 200px; margin-right: 200px; border-radius: 10px; border: 3px solid black;" method="post" autocomplete="on" enctype="multipart/form-data">
+                       
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" placeholder="Username" required ><br><br>
+                        
+                        <label for="email">Email:</label><br>
+                        <input  type="email"  id="email" placeholder="Example@gmail.com" required ><br><br>
+                        
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" placeholder="Password" required ><br><br>
+                        
+                        <button type="submit" id="loginButton">Login </button>
+
+                    </form></center>
+                    <script>
+                    const loginForm = document.getElementById("loginForm");
+
+                    const CORRECT_EMAIL = "n.ghatasheh@ju.edu.jo";
+                    const CORRECT_PASSWORD = "TOP SECRET";
+
+                    loginForm.addEventListener("submit", function (event) {
+
+                    event.preventDefault();
+
+                    const email = document.getElementById("email").value;
+                    const password = document.getElementById("password").value;
+
+                    if (
+                        email === CORRECT_EMAIL &&
+                        password === CORRECT_PASSWORD )
+                       {
+
+                           window.location.href = "dr.nazeeh.html";
+
+                         } else {
+
+                         alert("Incorrect email, password, or passkey.");
+                         
+                         }
+                        
+                         });</script>
+                    <!--
                           <div class="container mt-5">
                                ( Camera Section )  JS
                               <video id="camera" autoplay playsinline width="400"></video>
                               <canvas id="photo" style="display:none;"></canvas>
                               <button id="openCamera" class="btn btn-primary">Open Camera</button>
                               <button id="capture" class="btn btn-success">Take Photo</button>
-                              
                           </div>-->
-                  </div>
             </div>
         </div>
-    <audio id="music" loop>
-    <source src=><!--background music (still there is some js coding for it)-->
-    </audio>
-    <footer style="background: linear-gradient(135deg, #111827, #1f2937); color: white; padding: 30px 20px 15px; margin-top: 40px; border-top: 3px solid #f59e0b; font-family: Arial, sans-serif;">
+        
+        <footer style="background: linear-gradient(135deg, #111827, #1f2937); color: white; padding: 30px 20px 15px; margin-top: 40px; border-top: 3px solid #f59e0b; font-family: Arial, sans-serif;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1100px; margin: 0 auto;">
             <div style="flex: 1 1 220px;">
-                <h3 style="margin: 0 0 10px; color: #fbbf24;">D.NAZEEH</h3>
+                <h3 style="margin: 0 0 10px; color: #fbbf24;">Dr.NAZEEH</h3>
                 <p style="margin: 0; line-height: 1.6; color: #d1d5db;">
                 Welcome to my WEB 1 project. This page helps identify visitors and collect basic information in a simple and friendly way also you can say this is my business website but not finished yet unfortunately ):</p>
             </div>
@@ -78,6 +106,6 @@
         <div style="border-top: 1px solid rgba(255,255,255,0.2); max-width: 1100px; margin: 20px auto 0; padding-top: 15px; text-align: center; color: #d1d5db; font-size: 14px;">
             © 2026 My First Project | All Rights Reserved
         </div>
-    </footer>    
+        </footer> 
     </body>
 </html>
