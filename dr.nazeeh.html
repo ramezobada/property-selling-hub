@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CFP's CSS sheet.css">
     <title>dr.nazeeh page</title>
 </head>
 <body>
-this page for dr.nazeeh only and it is a simple page to identify him and collect his basic information in a simple and friendly way.
+   
+ <h2 id="typingText"> </h2>
+<table style="margin-bottom: 100%;" class="tableDesign" border="1">
+    <tr>
+        <th colspan="2">Dr. Nazeeh's Information</th>
+    </tr>
+    <tr>
+        <th>Field</th>
+        <th>Information</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Dr. Nazeeh</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>dr.nazeeh@gmail.com</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>********</td>
+    </tr>
+</table>
+<h3 style="text-align: center; color: #b03232;">this is the end of my project hope i did cover everything well thank you for your time and</h3>
+ <script>
+    const text = "welcome dr nazeeh this page is programmed especially for you";
+const typingText = document.getElementById("typingText");
+
+let index = 0;
+
+function typeWriter() {
+
+    if (index < text.length) {
+        typingText.textContent += text.charAt(index);
+        index++;
+
+        setTimeout(typeWriter, 100);
+    }
+}
+
+typeWriter();
+</script>
+<script>
+   window.addEventListener("load", () => {
+    const sound = document.getElementById("welcomeSound");
+    sound.volume = 0.3;
+    sound.play();
+});
+</script>
+<audio id="welcomeSound" preload="auto">
+    <source src="VScode/collage projects/WEB1 NAZEEH/YTDown.com_Shorts_Sir-welcome-home_Media_R-y7usHxwF8_009_128k.mp3" type="audio/mpeg" />
+</audio>
+<footer style="background: linear-gradient(135deg, #111827, #1f2937); color: white; padding: 30px 20px 15px; margin-top: 40px; border-top: 3px solid #f59e0b; font-family: Arial, sans-serif;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1100px; margin: 0 auto;">
+            <div style="flex: 1 1 220px;">
+                <h3 style="margin: 0 0 10px; color: #fbbf24;">D.NAZEEH</h3>
+                <p style="margin: 0; line-height: 1.6; color: #d1d5db;">
+                Welcome to my WEB 1 project. This page helps identify visitors and collect basic information in a simple and friendly way also you can say this is my business website but not finished yet unfortunately ):</p>
+            </div>
+
+            <div style="flex: 1 1 180px;">
+                <h4 style="margin: 0 0 12px; color: #fbbf24;">Quick Links</h4>
+                <p style="margin: 6px 0; color: #d1d5db;"><a href="contact.html" style="color: #f9fafb; text-decoration: none;">Home</a></p>
+                <p style="margin: 6px 0; color: #d1d5db;"><a href="about.html" style="color: #f9fafb; text-decoration: none;">About</a></p>
+                <p style="margin: 6px 0; color: #d1d5db;"><a href="contact.html" style="color: #f9fafb; text-decoration: none;">Contact</a></p>
+            </div>
+
+            <div style="flex: 1 1 220px;">
+                <h4 style="margin: 0 0 12px; color: #fbbf24;">Contact</h4>
+                <p style="margin: 6px 0; color: #d1d5db;">Email: ramez.meme82@gmail.com</p>
+                <p style="margin: 6px 0; color: #d1d5db;">Phone: +962 79 202 1327</p>
+                <p style="margin: 6px 0; color: #d1d5db;">Location: Jordan-Aqaba</p>
+            </div>
+        </div>
+
+        <div style="border-top: 1px solid rgba(255,255,255,0.2); max-width: 1100px; margin: 20px auto 0; padding-top: 15px; text-align: center; color: #d1d5db; font-size: 14px;">
+            © 2026 My First Project | All Rights Reserved
+        </div>
+    </footer>
 </body>
 </html>

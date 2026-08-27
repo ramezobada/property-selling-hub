@@ -1,0 +1,22 @@
+.tableDesign {
+ margin: 0 auto;
+ border: 3px solid black;
+ font-family: Arial, sans-serif;
+}
+th {
+ background-color: #fbe4e3;
+ color: #d72638;
+ font-weight: bold;
+}
+tr {
+ background-color: #d72638;
+ color: #fbe4e3;
+}
+body {
+ background-color: #fbe4e3;
+ font-family: Arial, sans-serif;
+}
+h2 {
+ color: #8a0613;
+ font-family: lucida handwriting, cursive;
+}
